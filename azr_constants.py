@@ -45,5 +45,5 @@ PRESET_HELP = {
     "Fibonacci: A, B ohne AA": "Folgen aus A und B ohne zwei A hintereinander: die Fibonacci-Zahlen. Der kleinste Fall, den man von Hand aufzählen kann.",
     "Rekursion mit Anlauf": "Drei Symbole, vier Verbote. Die Rekursion der Zahlenfolge hat einen Anlauf: sie gilt erst ab n = 5. Gut für Experiment 4 (Raten statt Herleiten).",
     "Viele Verbote, mehr Zustände": "Sechs Verbote bis Länge 4: der Automat braucht deutlich mehr Zustände, die Rekursion bleibt billig.",
-    "Zu lang zum Aufzählen (n = 40)": "Standardregeln mit n = 40: Aufzählen ist hier unbezahlbar, die Rekursion zählt es in Bruchteilen einer Millisekunde.",
+    "Zu lang zum Aufzählen (n = 40)": "Standardregeln mit n = 40: Aufzählen ist hier unbezahlbar, die Rekursion zählt es auf dem Entwicklungsrechner in Bruchteilen einer Millisekunde (rechnerabhängig).",
 }

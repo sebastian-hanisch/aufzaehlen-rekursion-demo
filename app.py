@@ -289,10 +289,10 @@ st.markdown(
     f"""
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
-| **Nur Verbote zusammenhängender Teilfolgen** | Regeln wie „genau fünf Nachtschichten insgesamt“ oder „jedes Symbol höchstens einmal“ brauchen mehr Gedächtnis. Im zweiten Fall wächst der Zustand selbst (Experiment 5). | Stück 4 und 7 der Reihe: Zustandsmengen, Siebformel |
+| **Verbote zusammenhängender Teilfolgen** | Der kleine Automat ist für diese Art Verbot gezeigt. Andere Regeln können einen kleinen Automaten haben oder mehr Gedächtnis brauchen, etwa „jedes Symbol höchstens einmal“: Dort wächst der Zustand selbst (Experiment 5). | Stück 4 und 7 der Reihe: Zustandsmengen, Siebformel |
 | **Der Zustand bleibt klein** | Für Verbote hat der Automat höchstens 1 plus die Summe der Verbotslängen minus 1 Zustände ({C.PATTERN_MAX_COUNT} Muster bis Länge {C.PATTERN_MAX_LEN} geben höchstens {1 + C.PATTERN_MAX_COUNT * (C.PATTERN_MAX_LEN - 1)}). Das gilt nur für Verbote dieser Art. | – |
 | **Zeiten gelten für diesen Rechner und Python** | Die Messungen hängen von Rechner, Last und Sprache ab, zwei Läufe unterscheiden sich spürbar. Hochrechnungen sind keine Messungen. | – |
-| **Raten findet eine Rekursion, aber nicht immer die kleinste richtige** | Kleinere Ordnungen passen oft zu den ersten Gliedern und scheitern später (Experiment 4); bei einem Anlauf gilt die Rekursion erst ab einem späteren n. | Stück 2: Herleitung statt Raten |
+| **Raten findet die kleinste Ordnung ohne Anlauf** | Kleinere Ordnungen passen oft zu den ersten Gliedern und scheitern später (Experiment 4); bei einem Anlauf ist die wirksame Ordnung kleiner (Anlauf-Preset: 4 statt 5) und die Rekursion gilt erst ab einem späteren n. | Stück 2: Herleitung statt Raten |
 | **Schichtfolgen sind nur der Rahmen** | Echte Dienstplanung ist ein Optimierungsproblem mit Kosten und Besetzung; hier wird nur gezählt. | – |
 """
 )

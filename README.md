@@ -52,8 +52,8 @@ Jede Zahl steht in `tests/test_claims.py`, `tests/test_verdicts.py` oder `tests/
 
 - **Zeiten und Hochrechnungen hängen vom Rechner ab.** Phase 0 maß Aufzählen bei n = 15 in 14,6 und 25,6 s an zwei Läufen desselben Rechners (Last). Die App misst bei jedem Klick neu; die Hochrechnung ist keine Messung und nimmt an, dass die Zeit je Wort gleich bleibt.
 - **Python, nicht kompiliert.** In C wären alle Wände weiter hinten; die Aussage „der Zustand ist die Wand“ gilt davon unabhängig, die Zahl der Tage nicht.
-- **Nur Verbote zusammenhängender Teilfolgen** haben einen kleinen Automaten. Regeln wie „genau fünf Nachtschichten insgesamt“ brauchen mehr Gedächtnis (Stück 8, Zählen nach Parameter).
-- **Raten findet nicht immer die kleinste richtige Rekursion.** „Ordnung gleich Zustandszahl“ gilt in zwei von drei geprüften Regelsätzen; in der dritten ist die wirksame Ordnung kleiner (Koeffizient 0, Anlauf). Die Zustandszahl ist nur eine obere Schranke (Cayley–Hamilton).
+- **Der kleine Automat ist für Verbote zusammenhängender Teilfolgen gezeigt** (höchstens 1 plus Summe der Längen minus 1 Zustände). Andere Regeln können ebenfalls einen kleinen Automaten haben, etwa „gerade Zahl von Nachtschichten“ mit zwei Zuständen; bei „jedes Symbol höchstens einmal“ wächst der Zustand exponentiell (Stück 8, Zählen nach Parameter).
+- **Raten findet die kleinste Ordnung ohne Anlauf, nicht die wirksame Ordnung mit Anlauf.** „Ordnung gleich Zustandszahl“ gilt in zwei von drei geprüften Regelsätzen; in der dritten ist die wirksame Ordnung kleiner (Anlauf-Preset: 4 statt 5; Koeffizient 0). Die Zustandszahl ist nur eine obere Schranke (Cayley–Hamilton).
 - **Experiment 4 nur bis 12 Zustände und Ordnung 12.** Darüber ist die Bruchrechnung für die App zu teuer; die App sagt es.
 - **Zweite Wand mit einer Verbotsdichte je Messung**; die Anzahlen gültiger Reihenfolgen wachsen mit zufälligen Verboten nicht gleichmäßig (die Paare für m + 1 Symbole sind nicht die Paare für m Symbole plus eine neue), Trends daraus sind nicht abzulesen; gezeigt werden nur Zustandszahl und Zeit.
 - **Mit Plotly-Klick nicht getestet:** die Diagramme haben keine Auswahl; alle Achsen sind gesperrt.
