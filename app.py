@@ -90,6 +90,19 @@ Weiter unten: **fünf Experimente** (**🔬**), eine **🎲 Spielwiese**, **🚧
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/aufzaehlen-rekursion-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Gezählt wird, wie viele Folgen aus Schichten (hier Früh, Spät, Nacht) erlaubt sind, wenn bestimmte Schichten nicht direkt aufeinander folgen dürfen. **Jede Folge einzeln zu prüfen** gibt früh auf. Die **Rekursion** merkt sich stattdessen nur, **wie die Folge gerade endet** (das Gedächtnis der Regeln, der Zustand), und rechnet Tag für Tag weiter. Folgen, die gleich enden, haben dieselben erlaubten Fortsetzungen; man braucht nur ihre Anzahl.
+
+**Wie groß muss dieses Gedächtnis sein?** Bei Verboten zusammenhängender Teilfolgen bleibt es klein. Bei „jedes Symbol genau einmal“ muss man sich merken, welche Symbole schon benutzt sind, und es wächst selbst sehr schnell (die zweite Wand). Alles ist gerechnet, nichts stammt aus echten Dienstplänen; Zeiten sind Messungen dieses Rechners.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/aufzaehlen-rekursion-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 with st.expander("So funktioniert die Rekursion", expanded=True):
     st.markdown(
         """
@@ -300,6 +313,25 @@ st.markdown(
 st.markdown("---")
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/aufzaehlen-rekursion-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind ein Alphabet $\Sigma$ mit $k$ Zeichen und verbotene Teilfolgen $P$. Gesucht ist die Zahl $a(n)$ der Folgen der Länge $n$, die kein Verbot enthalten.
+
+| Symbol | Bedeutung |
+|---|---|
+| $\Sigma,\ k$ | das Alphabet (hier die Schichten) und die Zahl seiner Zeichen |
+| $P,\ p_j$ | die Verbote (verbotene Teilfolgen) und ein einzelnes Verbot |
+| $a(n)$ | Zahl der gültigen Folgen der Länge $n$, höchstens $k^n$ |
+| $z,\ Z$ | ein Zustand (längstes Ende der Folge, das ein Anfang eines Verbots ist) und die Menge der Zustände |
+| $v_n(z)$ | Zahl der gültigen Folgen der Länge $n$, die im Zustand $z$ enden |
+| $\delta(z, c)$ | Zustand nach dem Zeichen $c$, oder verboten |
+| $m$ | Zahl der Symbole in der zweiten Wand (jedes genau einmal) |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/aufzaehlen-rekursion-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Problem.** Gegeben ein Alphabet $\Sigma$ mit $k$ Zeichen und Verbote $P = \{p_1, \dots, p_s\}$ (Wörter über $\Sigma$). Gesucht ist $a(n)$, die Zahl der Wörter der Länge $n$, die kein $p_j$ als zusammenhängende Teilfolge enthalten. Es gilt $a(n) \le k^n$.
@@ -325,5 +357,5 @@ st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
     "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
-    "Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html)."
+    "Mehr zur Reihe: [Abzählen: von der Rekursion zur Verfahrenswahl](https://sebastianhanisch.net/konzepte-abzaehlen.html)."
 )

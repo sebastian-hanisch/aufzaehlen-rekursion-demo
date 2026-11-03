@@ -1,7 +1,6 @@
 # Aufzählen und Rekursion – was man sich merken muss – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-aufzaehlen-rekursion-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-aufzaehlen-rekursion-demo.streamlit.app/)**
 
 Wurzel der Reihe **„Abzählen und erzeugende Funktionen“** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“ (Stück 1 von 16; die Linie wird erst vollständig veröffentlicht). Die Demo zählt **Folgen mit verbotenen Teilfolgen** (Standard: Schichtfolgen aus Früh, Spät, Nacht ohne „Früh direkt nach Nacht“ und ohne drei Nächte in Folge) auf drei Wegen: jede Folge prüfen, nur gültige Anfänge erweitern, und die **Rekursion über einen Zustand**. Es ist die erste Demo der Reihe; ein Nachfolger (Stück 2) leitet aus derselben Rekursion die erzeugende Funktion her. Schichtfolgen sind nur der Rahmen: Dienstplanung ist ein Optimierungsproblem, hier wird nur gezählt.
 
@@ -123,4 +122,4 @@ Gebaut mit Streamlit, Plotly und fpdf2.
 
 ---
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Abzählen: von der Rekursion zur Verfahrenswahl](https://sebastianhanisch.net/konzepte-abzaehlen.html).
